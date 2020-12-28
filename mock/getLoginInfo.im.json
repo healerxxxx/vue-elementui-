@@ -1,0 +1,16 @@
+{
+  "code": 200,
+  "data": {
+    "adminId": 2,
+    "adminName": "潘宏伟",
+    "adminNickname": "小生",
+    "adminType": 2,
+    "avatar": "https://relottery.ws.126.net/thread/20200525/8VBA9h.jpg",
+    "loginName": "bjpanhongwei@corp.netease.com",
+    "loginStatus": 0,
+    "needNotice": 1,
+    "phone": "Jr3NpPdjPf",
+    "shortcutKey": 0
+  },
+  "message": "操作成功"
+}

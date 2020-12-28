@@ -1,0 +1,124 @@
+html,
+body {
+  font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 14px;
+  min-height: 100vh;
+  position: relative;
+}
+.scrollbar-wrapper {
+  overflow-x: hidden !important;
+}
+.el-scrollbar__bar.is-horizontal {
+  display: none;
+}
+.page-bar-reset {
+  padding: 0 !important;
+  margin-top: 15px !important;
+  text-align: center;
+}
+
+.nav-tools {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.el-main a {
+  &:hover {
+    color: #e62121;
+    text-decoration: underline;
+  }
+}
+
+.word-break {
+  word-wrap: break-word;
+  word-break: break-all;
+  white-space: normal;
+}
+
+.text-ellipsis {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.el-table__expanded-cell[class*=cell] {
+  padding: 0 0 0 50px!important;
+}
+
+.expend-hidden .el-table__expand-column .cell {
+  display: none!important;
+}
+
+.detail-table {
+  width: 100%;
+  word-wrap: break-word;
+  word-break: break-all;
+  white-space: normal;
+  tr {
+    td {
+      padding: 10px;
+      border: 1px solid #ebeef5;
+    }
+    td:nth-child(2n-1) {
+      background: #fafafa;
+      min-width: 80px;
+    }
+    td:nth-child(2n) {
+      min-width: 100px;
+    }
+  }
+}
+
+.text-red {
+  color: #db0028 !important;
+}
+
+.single-uploader {
+  .el-upload {
+    border: 1px dashed #d9d9d9;
+    border-radius: 6px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    float: left;
+  }
+  .el-upload:hover {
+    border-color: #e62121;
+  }
+  .single-uploader-icon {
+    font-size: 28px;
+    color: #8c939d;
+    width: 98px;
+    height: 98px;
+    line-height: 98px;
+    text-align: center;
+  }
+  .single-img {
+    width: 98px;
+    height: 98px;
+    display: block;
+  }
+}
+
+.num-lottery-red-ball, .num-lottery-blue-ball {
+  width: 18px;
+  height: 18px;
+  line-height: 18px;
+  text-align: center;
+  color: #ffffff;
+  font-size: 12px;
+  border-radius: 100%;
+  margin-left: 2px;
+  margin-bottom: 2px;
+  display: inline-block;
+}
+.num-lottery-blue-ball {
+  background: #30a1f2;
+}
+.num-lottery-red-ball {
+  background: #e62121;
+}

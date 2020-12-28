@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>网易红彩运营平台</title>
+<link href="https://static.ws.126.net/163/relottery/frontend-manager-bowlder/collect/head~fad942c1eed0.css" rel="stylesheet"  />
+</head>
+<body ne-module="/frontend-manager-bowlder/js/index.js">
+    <header class="header">
+    	<h2 class="title">网易红彩运营平台</h2>
+        <h3 class="login" ne-show="hasLogin">
+            <span>您好，<em ne-html="userName"></em></span>
+            <a ne-click="logout()">安全退出</a>
+        </h3>
+    </header>
+    <div class="main">
+        <aside class="navbar" ne-module="/frontend-manager-bowlder/modules/navbar/navbar.js" ne-state-extend="{navList: sidenav}">
+<ul class="ne-nav">
+    <li ne-repeat="mainNav in state.navList" ne-show="{{mainNav.isAuth}}">
+        <a class="ne-nav-item" ne-class="{{currentNav==mainNav.router?'active':''}} {{mainNav.isUnfold?'unfold':''}}" ne-href="#{{mainNav.router}}" ne-if="{{mainNav.isAuth}}" ne-click="toggleClass($target, 'unfold'),emitInit(mainNav.router)">{!{mainNav.text}}</a>
+        <ul class="ne-subnav" ne-if="{{mainNav.isAuth && mainNav.subNavList}}">
+            <li ne-repeat="subNav in mainNav.subNavList" ne-show="{{subNav.isAuth}}">
+                <a class="ne-subnav-item" ne-class="{{currentNav==subNav.router?'active':''}}" ne-href="#{{subNav.router}}" ne-if="{{subNav.isAuth}}" ne-click="emitInit(subNav.router)">{!{subNav.text}}</a>
+            </li>
+        </ul>
+    </li>
+</ul></aside>
+        <section class="content" ne-id="mainRoute" ne-module="/frontend-manager-bowlder/modules/route/route.js" ne-state-extend="{routeRules:routeConfig}"></section>
+    </div>
+    <div ne-role="alertBox" ne-plugin="/frontend-manager-bowlder/modules/popbox/popbox.js" style="display:none; border-radius: 5px" ne-plugin-state="maxWidth:500;closeDelay:10;zIndex:110" class="ne-popbox">
+        <div class="ne-popbox-body" ne-role="content">
+            <div class="ne-head">
+                <a class="ne-head-close" ne-role="popbox-close">x</a>
+            </div>
+            <div class="ne-form">
+                <div class="ne-form-line">
+                    <p class="alert-info" ne-html="alertData.content"></p>
+                </div>
+            </div>
+            <div class="ne-util">
+                <a class="btn btn-small btn-white" ne-role="popbox-close">取消</a> <a class="btn btn-small btn-red" ne-click="alertData.ok()">确定</a>
+            </div>
+        </div>
+    </div>
+<script src="https://static.ws.126.net/163/relottery/frontend-manager-bowlder/collect/foot~6bab199e0b1f.js" charset="utf-8"></script>
+</body>
+</html>

@@ -1,0 +1,14 @@
+{
+  "code": 200,
+  "data": {
+    "adminId": 163,
+    "id": 163,
+    "isAdmin": true,
+    "isSuperAdmin": true,
+    "loginName": "hongcai@corp.netease.com",
+    "name": "网易红彩",
+    "roleList": [1, 17, 19, 33, 24, 40],
+    "userName": "网易红彩"
+  },
+  "message": "操作成功"
+}

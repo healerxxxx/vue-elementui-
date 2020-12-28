@@ -1,0 +1,125 @@
+html,
+body {
+  font-family: 'Helvetica Neue', Helvetica, 'PingFang SC', 'Hiragino Sans GB',
+    'Microsoft YaHei', '微软雅黑', Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 14px;
+  min-height: 100vh;
+  position: relative;
+}
+@keyframes circleRotate {
+  0% {
+    transform: rotate(0deg) translateZ(0);
+  }
+  100% {
+    transform: rotate(360deg) translateZ(0);
+  }
+}
+.scrollbar-wrapper {
+  overflow-x: hidden !important;
+}
+
+.el-scrollbar__view {
+  height: 100%;
+  .el-menu {
+    height: 100%;
+  }
+}
+
+.el-menu-item.is-active,
+.el-tabs__nav.is-active {
+  color: #333;
+  font-weight: bold;
+}
+.el-menu-item,
+.el-submenu__title {
+  font-size: 16px;
+}
+
+.el-scrollbar__bar.is-horizontal {
+  display: none;
+}
+
+.el-image-viewer__close {
+  color: #fff;
+  opacity: 1;
+}
+
+.page-bar-reset {
+  padding: 0 !important;
+  margin-top: 15px !important;
+  text-align: center;
+}
+
+.nav-tools {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  h2 {
+    font-size: 20px;
+  }
+}
+
+.el-main a {
+  &:hover {
+    color: #62B074;
+    text-decoration: underline;
+  }
+}
+
+.word-break {
+  word-wrap: break-word;
+  word-break: break-all;
+  white-space: normal;
+}
+
+.text-ellipsis {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+// .el-table {
+//   thead {
+//     font-size: 16px;
+//   }
+// }
+.el-table__expanded-cell[class*='cell'] {
+  padding: 0 0 0 50px!important;
+}
+
+.expend-hidden .el-table__expand-column .cell {
+  display: none!important;
+}
+
+.single-uploader {
+  .el-upload {
+    border: 1px dashed #d9d9d9;
+    border-radius: 6px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    float: left;
+  }
+  .el-upload:hover {
+    border-color: #e62121;
+  }
+  .single-uploader-icon {
+    font-size: 28px;
+    color: #8c939d;
+    width: 100px;
+    height: 100px;
+    line-height: 100px;
+    text-align: center;
+  }
+  .single-img {
+    width: 100px;
+    height: 100px;
+    display: block;
+  }
+}
+// .el-table td {
+//   height: 51px;
+// }

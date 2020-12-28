@@ -1,0 +1,14 @@
+# Set the default behavior, in case people don't have core.autocrlf set.
+* text=auto
+*.text text eol=lf
+*.html text eol=lf
+*.js text eol=lf
+*.jsx text eol=lf
+*.json text eol=lf
+*.vue text eol=lf
+*.css text eol=lf
+*.less text eol=lf
+*.scss text eol=lf
+*.scss text eol=lf
+*.styl text eol=lf
+*.stylus text eol=lf
